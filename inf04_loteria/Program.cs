@@ -26,6 +26,13 @@ namespace inf04_loteria
             ZliczIWypisz(zestawy);
         }
 
+        /**************************************************
+        nazwa funkcji: WczytajLiczbeZestawow
+        opis funkcji:  Wczytuje z klawiatury liczbę zestawów do wylosowania.
+        parametry:     brak
+        zwracany typ i opis:
+            int - liczba zestawów do wylosowania
+        **************************************************/
         static int WczytajLiczbeZestawow()
         {
             while(true)
@@ -40,6 +47,15 @@ namespace inf04_loteria
             }
         }
 
+        /**************************************************
+        nazwa funkcji: GenerujZestawy
+        opis funkcji:  Generuje podaną liczbę zestawów losowych.
+        parametry:
+            n   - liczba zestawów do wygenerowania
+            rnd - randomowe liczby
+        zwracany typ i opis:
+            List<List<int>> - lista wygenerowanych zestawów
+        **************************************************/
         static List<List<int>> GenerujZestawy(int n, Random rnd)
         {
             var wynik = new List<List<int>>();
@@ -57,6 +73,14 @@ namespace inf04_loteria
             return wynik;
         }
 
+        /**************************************************
+        nazwa funkcji: WypiszZestawy
+        opis funkcji:  Wypisuje na ekran wszystkie wygenerowane zestawy
+        parametry:
+            List<List<int>> zestawy - lista wygenerowanych zestawów
+        zwracany typ i opis:
+            void - funkcja wypisuje dane
+        **************************************************/
         static void WypiszZestawy(List<List<int>> zestawy)
         {
             for(int i = 0; i < zestawy.Count; i++)
@@ -69,6 +93,15 @@ namespace inf04_loteria
             }
         }
 
+        /**************************************************
+        nazwa funkcji: ZliczIWypisz
+        opis funkcji:  Zlicza, ile razy w sumie pojawiła się każda liczba
+                       z zakresu
+        parametry:
+            List<List<int>> zestawy - lista wygenerowanych zestawów
+        zwracany typ i opis:
+            void - funkcja wypisuje liczność wystąpień
+        **************************************************/
         static void ZliczIWypisz(List<List<int>> zestawy)
         {
             int[] wystapienia = new int[50];
